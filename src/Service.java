@@ -22,10 +22,21 @@ public class Service {
         return produktRepository.getAllElements();
     }
 
+    /**
+     * Creates a product and adds it to the repopsitory
+     * @param name
+     * @param preis
+     * @param universum
+     */
     public void createAProdukt(String name,int preis, String universum){
         produktRepository.addElement(new Produkt(name,preis,universum));
     }
 
+    /**
+     * Retrieves a product by its id
+     * @param name
+     * @return product with the id from the user input
+     */
     public Produkt getProdukt(String name){
         int id = -1;
         for (Produkt p : produktRepository.getAllElements()) {
@@ -35,6 +46,10 @@ public class Service {
         return produktRepository.getElement(id);
     }
 
+    /**
+     * Updates a produkt by the user input
+     * @param produkt
+     */
     public void updateProdukt(Produkt produkt){
         for (Produkt p : produktRepository.getAllElements()){
             if (p.getName().equals(produkt.getName())){
@@ -47,6 +62,10 @@ public class Service {
         }
     }
 
+    /**
+     * Deletes a produkt using the id from the user input
+     * @param name
+     */
     public void deleteProdukt(String name){
         for (Produkt p : produktRepository.getAllElements()){
             if (p.getName().equals(name)){

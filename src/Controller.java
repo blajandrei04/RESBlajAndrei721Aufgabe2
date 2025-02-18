@@ -15,7 +15,7 @@ public class Controller {
         for (Produkt produkt: service.alleProdukteZuruckgeben())
             System.out.println(produkt);
     }
-    public void alleKundenAnschreiben(){
+    public void alleCharaktereAnschreiben(){
         for (Charaktere kunde: service.alleKundenZuruckgeben())
             System.out.println(kunde);
     }

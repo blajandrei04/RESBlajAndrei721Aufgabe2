@@ -32,7 +32,7 @@ public class Console {
             sc.nextLine();
 
             switch (option) {
-                case 1: {controller.alleKundenAnschreiben();
+                case 1: {controller.alleCharaktereAnschreiben();
                     controller.alleProdukteAnschreiben();
                     break;}
 
@@ -64,15 +64,15 @@ public class Console {
                             3. Einen bestimmten Charakter finden
                             4. Einen Charakter aktualisieren
                             5. Einen Charakter loschen
-                            6. Charaktere nach Ort filtrieren
-                            7. Charaktere finden, die ein Produkt in einer gegebenen HerkunfstsOrt gekauft haben
+                            6. Charaktere nach Region filtrieren
+                            7. Charaktere finden, die ein Produkt in einer gegebenen Universum gekauft haben
                             8. Sortiere Produkte eines Charakteres nach Preis
                             0. Exit""");
                     int crudOption = sc.nextInt();
                     sc.nextLine();
                     switch (crudOption) {
                         case 1: {controller.createCharakter(); break;}
-                        case 2: {controller.alleKundenAnschreiben(); break;}
+                        case 2: {controller.alleCharaktereAnschreiben(); break;}
                         case 3: {controller.showKunde(); break;}
                         case 4: {controller.updateKundeValidate(); break;}
                         case 5: {controller.deleteKunde(); break;}
