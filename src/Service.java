@@ -56,9 +56,8 @@ public class Service {
         }
     }
 
-    public void createACharakter(String name, String ort){
+    public void createAKunde(String name, String ort){
         int id = -1;
-
         for (Charaktere k : charaktereRepository.getAllElements()){
             if (id < k.getId())
                 id = k.getId();
